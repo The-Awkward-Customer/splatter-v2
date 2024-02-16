@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { CheckUser } from "@/lib/getUser";
 import TopBar from "../components/topbar/topbar";
-import { CheckUserData } from "@/lib/queries";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +21,7 @@ export default async function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <TopBar userString={user_string} />
-        <body className={inter.className}>{children}</body>
+        <body>{children}</body>
       </html>
     </ClerkProvider>
   );
