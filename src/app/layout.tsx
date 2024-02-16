@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { CheckUser } from "@/lib/getUser";
-import TopBar from "../components/topbar/topbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,11 +15,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { user_string } = await CheckUser();
   return (
     <ClerkProvider>
       <html lang="en">
-        <TopBar userString={user_string} />
         <body>{children}</body>
       </html>
     </ClerkProvider>
