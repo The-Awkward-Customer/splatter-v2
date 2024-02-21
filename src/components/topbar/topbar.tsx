@@ -4,13 +4,13 @@ import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
 type TopBarProps = {
-  userString: string | null;
+  user_id: string | null;
 };
 
-export default function TopBar({ userString }: TopBarProps) {
+export default function TopBar({ user_id }: TopBarProps) {
   return (
     <section>
-      {userString ? (
+      {user_id ? (
         <UserButton afterSignOutUrl="/" />
       ) : (
         <Link href={"/sign-in"}>Sign in</Link>
