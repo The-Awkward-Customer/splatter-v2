@@ -1,0 +1,9 @@
+/* css for topbar */
+
+.topbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 24px;
+}
