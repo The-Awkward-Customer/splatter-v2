@@ -8,7 +8,7 @@ type TextProps = {
   string: string; // This is the text or content you want to render within the text element
 };
 
-export default function ({ text, className, string }: TextProps) {
+export default function Text({ text, className, string }: TextProps) {
   const Text = text; // Dynamically set the tag type
 
   // Apply the className from props if provided, otherwise, use a default className
