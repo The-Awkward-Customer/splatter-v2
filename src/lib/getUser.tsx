@@ -7,7 +7,7 @@ import { db } from "@/lib/db";
 // the CheckUser Function checks to see if the user exists in the db and adds it if not.
 // it also exposes the value of userId to be used elsewhere
 
-export async function CheckUser() {
+export async function UserDetails() {
   console.log("hello world");
 
   const { userId } = await auth();
@@ -39,7 +39,6 @@ FROM
   // this will return falsy and trigger the query when the user is signed out.
   // we use a truthy check for user id to ensure it is not NULL
   const userExists = users.some((user: any) => user.user_id === userId);
-  console.log(`does the user exists? ${userExists}`);
 
   //if user does NOT exist create new user in Database
   if (!userExists && userId) {
@@ -51,10 +50,6 @@ FROM
     userId,
   ]);
   const userSpecificData = getAssociatedData.rows;
-
-  console.log(
-    `associated data is: ${JSON.stringify(userSpecificData, null, 2)}`
-  );
 
   return {
     user_id: userId,

@@ -1,3 +1,42 @@
+:root {
+  /* light */
+  /* colors */
+  --black: #353535;
+  --green-success: #2dac32;
+  --light-grey: #adadad;
+  --white: #ffffff;
+  --bdr-neutral: var(--light-grey);
+  --bdr-primary: var(--black);
+  --bg-page: var(--white);
+  --bg-primary: var(--black);
+  --brand-most-used: #a7e15e;
+  --fg-primary: var(--black);
+  --fg-success: var(--green-success);
+  --fg-text-on-primary: var(--white);
+  --fg-text-primary: var(--black);
+  --fg-text-secondary: var(--light-grey);
+  /* numbers */
+  --spacing-x000: 0rem;
+  --spacing-x150: 0rem;
+  --spacing-x025: 0.25rem;
+  --spacing-x050: 0.5rem;
+  --spacing-x075: 0.75rem;
+  --spacing-x100: 1rem;
+  --spacing-x125: 1.25rem;
+  --spacing-x200: 2rem;
+  --spacing-x300: 3rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* core */
+    --black: #2c2c2c;
+    --green-success: #2dac32;
+    --lightgrey: #adadad;
+    --white: #ffffff;
+  }
+}
+
 * {
   margin: 0px;
   padding: 0px;

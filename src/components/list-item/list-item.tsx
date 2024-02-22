@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import "./list-item.module.css";
+import cssStyles from "./list-item.module.css";
 
 // type ComponentProps={
 //    TextSlotOne: React.ReactNode
@@ -10,20 +10,20 @@ import "./list-item.module.css";
 // }
 
 type ComponentProps = {
-  prefix: React.ReactNode;
+  prefix?: React.ReactNode;
   slots: {
     SlotOne: React.ReactNode;
-    SlotTwo: React.ReactNode;
-    SlotThree: React.ReactNode;
+    SlotTwo?: React.ReactNode;
+    SlotThree?: React.ReactNode;
   };
-  suffix: React.ReactNode;
+  suffix?: React.ReactNode;
 };
 
 export default function ListItem({ slots, prefix, suffix }: ComponentProps) {
   return (
-    <div className="list-item-root">
+    <div className={cssStyles["list-item-root"]}>
       {prefix}
-      <div className="list-item-text-container">
+      <div className={cssStyles["list-item-content-wrapper"]}>
         {slots.SlotOne}
         {slots.SlotTwo}
         {slots.SlotThree}

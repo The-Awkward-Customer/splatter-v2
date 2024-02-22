@@ -1,0 +1,61 @@
+.body-xs-semiBold {
+  font-family: "Civil Premium";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 125% */
+}
+
+.body-sm-semiBold {
+  font-family: "Civil Premium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+}
+
+.body-md-semiBold {
+  font-family: "Civil Premium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+}
+.body-lg-semiBold {
+  font-family: "Civil Premium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+}
+
+.body-xs-semiBold {
+  font-family: "Civil Premium";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 125% */
+}
+
+.body-sm-reg {
+  font-family: "Civil Premium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+
+.body-md-semiBold {
+  font-family: "Civil Premium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+.body-lg-semiBold {
+  font-family: "Civil Premium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}

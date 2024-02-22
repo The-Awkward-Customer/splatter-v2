@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./button.module.css";
+import cssStyles from "./button.module.css";
 
 // Define the props for the button component
 type ButtonProps = {

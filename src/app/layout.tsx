@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
-import { CheckUser } from "@/lib/getUser";
+import { UserDetails } from "@/lib/getUser";
 import "./global.css";
 import TopBar from "@/components/topbar/topbar";
 
@@ -17,7 +17,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { user_id } = await CheckUser();
+  const { user_id } = await UserDetails();
 
   return (
     <ClerkProvider>
