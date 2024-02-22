@@ -9,6 +9,6 @@ type ButtonProps = {
   icon?: JSX.Element; // Optional icon as a React component
 };
 
-export function Button({ type, text, icon }: ButtonProps) {
+export default function Button({ type, text, icon }: ButtonProps) {
   return <button></button>;
 }
