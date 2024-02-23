@@ -21,16 +21,39 @@ export async function UserDetails() {
 
   let sqlInputNewUser = `INSERT INTO users (user_string, user_name) VALUES ($1, $2)`;
 
-  let sqlReturnAssociatedUserData = `SELECT
-  p.*,
-  CASE
-    WHEN upj.product_id IS NOT NULL THEN true
-    ELSE false
-  END AS user_association
-FROM
-  products p
-  LEFT JOIN user_products_junction upj ON p.id = upj.product_id
-  AND upj.user_id = ($1)`;
+  let sqlReturnAssociatedUserData = `
+  select
+    p.id,
+    p.name,
+    categories.product_type,
+    brand.brand_name,
+    company.company_name,
+    string_agg(
+      colors.color,
+      ', '
+      order by
+        colors.color
+    ) as colors,
+    case
+      when upj.product_id is not null then true
+      else false
+    end as user_association
+  from
+    products p
+    join categories on p.category_id = categories.id
+    join brand on p.brand_id = brand.id
+    join company on brand.company_id = company.id
+    join product_color_junction on p.id = product_color_junction.product_id
+    join colors on product_color_junction.color_id = colors.id
+    left join user_products_junction upj on p.id = upj.product_id
+    and upj.user_id = ($1)
+  group by
+    p.id,
+    p.name,
+    categories.product_type,
+    brand.brand_name,
+    company.company_name,
+    upj.product_id`;
 
   //get users and check if user exists
   const getUsers = await db.query(sqlGetUser_id); // SQL query

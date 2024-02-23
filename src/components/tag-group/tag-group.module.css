@@ -1,0 +1,7 @@
+.tag-group-root {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--spacing-x025);
+}

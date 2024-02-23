@@ -1,0 +1,40 @@
+/* small buttons */
+
+.text-only-sm {
+  background-color: rgb(255, 218, 255);
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.icon-only-sm {
+  background-color: rgb(253, 100, 253);
+  width: 100px;
+  height: 100px;
+}
+
+.icon-and-text-sm {
+  background-color: rgb(255, 0, 255);
+  width: 100px;
+  height: 100px;
+}
+
+/* lg buttons */
+
+.text-only-md {
+  background-color: rgb(202, 194, 255);
+  width: 100px;
+  height: 100px;
+}
+
+.icon-only-md {
+  background-color: rgb(140, 122, 255);
+  width: 100px;
+  height: 100px;
+}
+
+.icon-and-text-md {
+  background-color: rgb(34, 0, 255);
+  width: 100px;
+  height: 100px;
+}

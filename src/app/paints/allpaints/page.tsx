@@ -1,4 +1,5 @@
-import ListItem from "@/components/list-item/list-item";
+import Button from "@/components/button/button";
+import ListItemStructure from "@/components/list-item/list-item";
 import Text from "@/components/text/text";
 import { UserDetails } from "@/lib/getUser";
 
@@ -8,33 +9,33 @@ export default async function AllPaints() {
   console.log(userSpecificData);
 
   return (
-    <main>
-      <Text textType="p" string="Hello There!" style="body-sm-reg" />
+    <div>
       <h2>All paints</h2>
-      {userSpecificData.map((paintObj) => (
-        <div key={paintObj.id}>
-          <Text textType="p" string={paintObj.id} style="body-sm-reg" />
-          <Text textType="p" string={paintObj.name} style="body-sm-reg" />
-          <Text
-            textType="p"
-            string={paintObj.category_id}
-            style="body-sm-reg"
-          />
-          <Text textType="p" string={paintObj.brand_id} style="body-sm-reg" />
-        </div>
-      ))}
-      <ListItem
-        slots={{
-          SlotOne: (
-            <Text textType="p" string="Slot One" style="body-sm-semiBold" />
-          ),
+      <Button type="text-only" size="sm" text="hello" />
 
-          SlotTwo: <Text textType="p" string="Slot Two" style="body-sm-reg" />,
-          SlotThree: (
-            <Text textType="p" string="Slot Three" style="body-sm-reg" />
-          ),
-        }}
-      />
-    </main>
+      {userSpecificData.map((paintObj) => (
+        <ListItemStructure
+          key={paintObj.id}
+          slots={{
+            SlotOne: (
+              <Text
+                textType="p"
+                string={paintObj.name}
+                typeStyle="body-sm-semiBold"
+                colorStyle="primary"
+              />
+            ),
+            SlotTwo: (
+              <Text
+                textType="p"
+                string={paintObj.brand_name}
+                typeStyle="body-sm-reg"
+                colorStyle="secondary"
+              />
+            ),
+          }}
+        />
+      ))}
+    </div>
   );
 }
