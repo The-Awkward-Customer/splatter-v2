@@ -1,26 +1,24 @@
 import cssStyles from "./icon.module.css";
-import Image from "next/image";
+import { icons } from "@/components/icons/icons";
+
+type Colors = "primary" | "on-primary" | "green-success";
 
 type IconProps = {
   name: string;
-  size: "sm" | "md" | "lg";
-  color: "primary" | "secondary";
+  size: "sm" | "md" | "lg" | "xl" | "xxl";
+  color: string | Colors;
 };
 
-export default function icon({ name, size, color }: IconProps) {
-  const iconSize = cssStyles[`${size}`];
-  const iconColor = cssStyles[`${color}`];
+export default function Icon({ name, size, color }: IconProps) {
+  const wrapperSize = cssStyles[`${size}`];
+
+  // @ts-ignore
+  const Icon = icons[name];
+  if (!Icon) return null; // Return null or a default icon if not found
 
   return (
-    <div className={`${cssStyles["icon-root"]} ${iconSize} ${iconColor}`}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-      >
-        <path d={icons[name]} />
-      </svg>
+    <div className={wrapperSize}>
+      <Icon color={color} />
     </div>
   );
 }

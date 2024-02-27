@@ -10,9 +10,10 @@
   --bg-page: var(--white);
   --bg-primary: var(--black);
   --brand-most-used: #a7e15e;
+  --fg-success: var(--black);
   --fg-primary: var(--black);
   --fg-success: var(--green-success);
-  --fg-text-on-primary: var(--white);
+  --fg--on-primary: var(--white);
   --fg-text-primary: var(--black);
   --fg-text-secondary: var(--light-grey);
   /* numbers */
