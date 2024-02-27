@@ -11,7 +11,12 @@ export default async function AllPaints() {
   return (
     <div>
       <h2>All paints</h2>
-      <Button type="text-only" size="sm" text="hello" />
+      <Button type="text-only" size="sm" text="text-only-sm" />
+      <Button type="icon-and-text" size="sm" text="icon-and-text-sm" />
+      <Button type="icon-only" size="sm" text="icon-only-md" />
+      <Button type="text-only" size="md" text="text-only-md" />
+      <Button type="icon-and-text" size="md" text="icon-and-text-md" />
+      <Button type="icon-only" size="md" text="icon-only-md" />
 
       {userSpecificData.map((paintObj) => (
         <ListItemStructure

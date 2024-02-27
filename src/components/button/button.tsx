@@ -14,12 +14,6 @@ type ButtonProps = {
 };
 
 export default function Button({ type, text, icon, size }: ButtonProps) {
-  // const buttonSize = cssStyles[`${size}`];
-  // const buttonType = cssStyles[`${type}`];
-
-  // // Dynamically generate the class name based on the combination of button type and size
-  // const className =
-
   // Dynamically generate the class name based on type and size
   const className = `${type}-${size}`;
   // Use the dynamically generated class name to access the corresponding class from cssStyles
