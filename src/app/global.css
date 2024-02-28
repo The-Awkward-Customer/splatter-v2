@@ -13,7 +13,7 @@
   --fg-success: var(--black);
   --fg-primary: var(--black);
   --fg-success: var(--green-success);
-  --fg--on-primary: var(--white);
+  --fg-on-primary: var(--white);
   --fg-text-primary: var(--black);
   --fg-text-secondary: var(--light-grey);
   /* numbers */
@@ -42,4 +42,9 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+button {
+  all: unset;
 }

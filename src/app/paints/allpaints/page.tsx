@@ -12,16 +12,29 @@ export default async function AllPaints() {
   return (
     <div>
       <h2>All paints</h2>
-      <Button type="text-only" size="sm" text="text-only-sm" />
+      {/* <Button type="text-only" size="sm" text="text-only-sm" />
       <Button type="icon-and-text" size="sm" text="icon-and-text-sm" />
       <Button type="icon-only" size="sm" text="icon-only-md" />
       <Button type="text-only" size="md" text="text-only-md" />
       <Button type="icon-and-text" size="md" text="icon-and-text-md" />
-      <Button type="icon-only" size="md" text="icon-only-md" />
+      <Button type="icon-only" size="md" text="icon-only-md" /> */}
 
-      <Icon name="clock" size="lg" color="success" />
+      <Button
+        variant="primary"
+        type="icon-and-text"
+        size="md"
+        text="icon-only-md"
+      >
+        <Icon name="user" size="md" color="on-primary" />
+      </Button>
+
+      <Button variant="primary" type="icon-only" size="md">
+        <Icon name="plus" size="md" color="on-primary" />
+      </Button>
+
+      {/* <Icon name="clock" size="lg" color="success" />
       <Icon name="user" size="md" color="primary" />
-      <Icon name="plus" size="xxl" color="success" />
+      <Icon name="plus" size="xxl" color="success" /> */}
 
       {userSpecificData.map((paintObj) => (
         <ListItemStructure

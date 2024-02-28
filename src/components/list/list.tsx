@@ -1,4 +1,5 @@
 "use client";
+import Button from "../button/button";
 import ListItemStructure from "../list-item/list-item";
 import Text from "../text/text";
 
@@ -34,6 +35,7 @@ export default function FilterableList({ dataObj }: FilterableListProps) {
             />
           ),
         }}
+        suffix={<Button variant="primary" type="icon-only" size="sm" />}
       />
     </div>
   );
