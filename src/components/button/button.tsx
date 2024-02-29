@@ -1,6 +1,6 @@
 "use client";
+import { useRouter } from "next/navigation";
 
-import Text from "../text/text";
 import cssStyles from "./button.module.css";
 
 type Sizes = "sm" | "md";
@@ -13,6 +13,7 @@ type ButtonProps = {
   text?: string | any; // Optional text for the button
   children?: React.ReactNode; // Optional icon as a React component
   size: Sizes; // Size of the button
+  route?: string | null;
 };
 
 export default function Button({
@@ -21,13 +22,26 @@ export default function Button({
   children,
   size,
   variant,
+  route,
 }: ButtonProps) {
+  const router = useRouter();
   const typeSizeClass = cssStyles[`${type}-${size}`]; // Access the first class
   const variantClass = cssStyles[variant]; // Access the second class separately
   const buttonClass = `${typeSizeClass} ${variantClass}`; // Combine them
 
+  function HandleClick() {
+    if (route) {
+      // If route is provided, use it to navigate
+      router.push(route);
+    } else {
+      console.log("No route provided");
+    }
+    // If no route is provided, this function will do nothing
+    // You can also implement other default actions here if needed
+  }
+
   return (
-    <button className={buttonClass}>
+    <button className={buttonClass} onClick={HandleClick}>
       {/* Conditionally render icon if type is not 'text-only' */}
       {type !== "text-only" && children}
 

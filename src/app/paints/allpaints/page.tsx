@@ -40,6 +40,7 @@ export default async function AllPaints() {
         type="icon-and-text"
         size="md"
         text="icon-only-md"
+        route={"/"}
       >
         <Icon name="user" size="md" color="primary" />
       </Button>

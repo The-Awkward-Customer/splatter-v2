@@ -108,7 +108,6 @@
 }
 
 .secondary:active {
-  background-color: var(--bg-base-hover);
   transform: scale(0.98);
 }
 
