@@ -31,6 +31,25 @@ export default async function AllPaints() {
       <Button variant="primary" type="icon-only" size="md">
         <Icon name="plus" size="md" color="on-primary" />
       </Button>
+      <Button variant="primary" type="icon-only" size="sm">
+        <Icon name="plus" size="md" color="on-primary" />
+      </Button>
+
+      <Button
+        variant="secondary"
+        type="icon-and-text"
+        size="md"
+        text="icon-only-md"
+      >
+        <Icon name="user" size="md" color="primary" />
+      </Button>
+
+      <Button variant="secondary" type="icon-only" size="md">
+        <Icon name="plus" size="md" color="primary" />
+      </Button>
+      <Button variant="secondary" type="icon-only" size="sm">
+        <Icon name="plus" size="md" color="primary" />
+      </Button>
 
       {/* <Icon name="clock" size="lg" color="success" />
       <Icon name="user" size="md" color="primary" />

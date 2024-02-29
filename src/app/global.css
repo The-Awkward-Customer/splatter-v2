@@ -5,17 +5,22 @@
   --green-success: #2dac32;
   --light-grey: #adadad;
   --white: #ffffff;
+  --bdr-disabled: #a3a4a8;
   --bdr-neutral: var(--light-grey);
   --bdr-primary: var(--black);
+  --bg-base: var(--white);
+  --bg-base-hover: #e5e5e5;
+  --bg-disabled: #bec0c2;
   --bg-page: var(--white);
   --bg-primary: var(--black);
+  --bg-primary-hover: #434343;
   --brand-most-used: #a7e15e;
-  --fg-success: var(--black);
+  --fg-disabled: #81878e;
+  --fg-neutral: var(--light-grey);
+  --fg-on-primary: var(--white);
   --fg-primary: var(--black);
   --fg-success: var(--green-success);
-  --fg-on-primary: var(--white);
   --fg-text-primary: var(--black);
-  --fg-text-secondary: var(--light-grey);
   /* numbers */
   --spacing-x000: 0rem;
   --spacing-x150: 0rem;
