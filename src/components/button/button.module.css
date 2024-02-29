@@ -34,7 +34,6 @@
   padding-left: var(--spacing-x075);
   gap: var(--spacing-x025);
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
   line-height: 16px; /* 114.286% */
 }
@@ -47,8 +46,7 @@
   padding-left: var(--spacing-x100);
   gap: var(--spacing-x025);
   font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 20px; /* 125% */
 }
 
@@ -63,8 +61,7 @@
   padding-left: var(--spacing-x075);
   gap: var(--spacing-x025);
   font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 20px; /* 125% */
 }
 

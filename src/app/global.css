@@ -47,8 +47,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: sans-serif;
-  font-family: var(--font-civil);
+  font-family: var(--font-civil-premium);
 }
 
 button {
