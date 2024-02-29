@@ -29,7 +29,7 @@
   line-height: 20px; /* 125% */
 }
 
-.body-xs-semiBold {
+.body-xs-reg {
   font-family: "Civil Premium";
   font-size: 14px;
   font-style: normal;
@@ -45,17 +45,25 @@
   line-height: 20px; /* 125% */
 }
 
-.body-md-semiBold {
+.body-md-reg {
   font-family: "Civil Premium";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 125% */
 }
-.body-lg-semiBold {
+.body-lg-reg {
   font-family: "Civil Premium";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 125% */
+}
+
+.primary {
+  color: var(--fg-text-primary);
+}
+
+.secondary {
+  color: var(--fg-text-secondary);
 }

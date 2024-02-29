@@ -1,0 +1,116 @@
+.button-root,
+.text-only-sm,
+.icon-only-sm,
+.icon-and-text-sm,
+.text-only-md,
+.icon-only-md,
+.icon-and-text-md {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+}
+
+.text-only-sm {
+  height: 32px;
+  padding-right: var(--spacing-x100);
+  padding-left: var(--spacing-x100);
+  gap: var(--spacing-x025);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}
+
+.icon-only-sm {
+  height: 32px;
+  width: 44px;
+}
+
+.icon-and-text-sm {
+  height: 32px;
+  padding-right: var(--spacing-x100);
+  padding-left: var(--spacing-x075);
+  gap: var(--spacing-x025);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}
+
+/* md buttons */
+
+.text-only-md {
+  height: 44px;
+  padding-right: var(--spacing-x100);
+  padding-left: var(--spacing-x100);
+  gap: var(--spacing-x025);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+}
+
+.icon-only-md {
+  height: 44px;
+  width: 60px;
+}
+
+.icon-and-text-md {
+  height: 44px;
+  padding-right: var(--spacing-x100);
+  padding-left: var(--spacing-x075);
+  gap: var(--spacing-x025);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+}
+
+/* states & styles */
+
+.primary {
+  color: var(--fg-on-primary);
+  background-color: var(--bg-primary);
+  transition: transform 0.2s ease-in-out;
+}
+
+.primary:hover {
+  background-color: var(--bg-primary-hover);
+}
+
+.primary:active {
+  background-color: var(--bg-primary-hover);
+  transform: scale(0.98);
+}
+
+.primary:disabled {
+  color: var(--fg-disabled);
+  background-color: var(--bg-disabled);
+  border: 1px solid var(--bdr-disabled);
+  cursor: not-allowed;
+}
+
+.secondary {
+  color: var(--fg-primary);
+  background-color: var(--bg-page);
+  border: 1px solid var(--bdr-primary);
+  transition: transform 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
+  /* bdr-primary-hover */
+  box-shadow: 0px 0px 0px 0px #353535 inset;
+}
+
+.secondary:hover {
+  /* bdr-primary-hover */
+  box-shadow: 0px 0px 0px 2px #353535 inset;
+}
+
+.secondary:active {
+  transform: scale(0.98);
+}
+
+.secondary:disabled {
+  color: var(--fg-disabled);
+  background-color: var(--bg-disabled);
+  border: 1px solid var(--bdr-disabled);
+  cursor: not-allowed;
+}

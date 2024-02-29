@@ -1,0 +1,33 @@
+/* BEGIN: Colors */
+
+.tag-root {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--spacing-x050);
+  border: 1px solid var(--bdr-primary);
+}
+
+.neutral {
+  background-color: var(--bg-page);
+  color: var(--fg-text-primary);
+  border: 1px solid var(--bdr-primary);
+}
+
+/* BEGIN: Sizes */
+.sm {
+  padding-top: var(--spacing-x025);
+  padding-bottom: var(--spacing-x025);
+  padding-left: var(--spacing-x050);
+  padding: var(--spacing-x050);
+  /* styles for small size */
+}
+
+.lg {
+  padding-top: var(--spacing-x050);
+  padding-bottom: var(--spacing-x050);
+  padding-left: var(--spacing-x100);
+  padding: var(--spacing-x1000);
+}
+/* END: Sizes */

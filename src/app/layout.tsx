@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { UserDetails } from "@/lib/getUser";
 import "./global.css";
 import TopBar from "@/components/topbar/topbar";
-
-const inter = Inter({ subsets: ["latin"] });
+import civilFont from "../lib/custom-fonts";
 
 export const metadata: Metadata = {
   title: "Splatter",
@@ -22,7 +20,7 @@ export default async function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>
+        <body className={`${civilFont.variable}`}>
           <TopBar user_id={user_id} />
           {children}
         </body>

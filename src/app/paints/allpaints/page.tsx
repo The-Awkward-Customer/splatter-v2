@@ -1,4 +1,6 @@
-import ListItem from "@/components/list-item/list-item";
+import Button from "@/components/button/button";
+import Icon from "@/components/icon/icon";
+import ListItemStructure from "@/components/list-item/list-item";
 import Text from "@/components/text/text";
 import { UserDetails } from "@/lib/getUser";
 
@@ -8,33 +10,75 @@ export default async function AllPaints() {
   console.log(userSpecificData);
 
   return (
-    <main>
-      <Text textType="p" string="Hello There!" style="body-sm-reg" />
+    <div>
       <h2>All paints</h2>
-      {userSpecificData.map((paintObj) => (
-        <div key={paintObj.id}>
-          <Text textType="p" string={paintObj.id} style="body-sm-reg" />
-          <Text textType="p" string={paintObj.name} style="body-sm-reg" />
-          <Text
-            textType="p"
-            string={paintObj.category_id}
-            style="body-sm-reg"
-          />
-          <Text textType="p" string={paintObj.brand_id} style="body-sm-reg" />
-        </div>
-      ))}
-      <ListItem
-        slots={{
-          SlotOne: (
-            <Text textType="p" string="Slot One" style="body-sm-semiBold" />
-          ),
+      {/* <Button type="text-only" size="sm" text="text-only-sm" />
+      <Button type="icon-and-text" size="sm" text="icon-and-text-sm" />
+      <Button type="icon-only" size="sm" text="icon-only-md" />
+      <Button type="text-only" size="md" text="text-only-md" />
+      <Button type="icon-and-text" size="md" text="icon-and-text-md" />
+      <Button type="icon-only" size="md" text="icon-only-md" /> */}
 
-          SlotTwo: <Text textType="p" string="Slot Two" style="body-sm-reg" />,
-          SlotThree: (
-            <Text textType="p" string="Slot Three" style="body-sm-reg" />
-          ),
-        }}
-      />
-    </main>
+      <Button
+        variant="primary"
+        type="icon-and-text"
+        size="md"
+        text="icon-only-md"
+      >
+        <Icon name="user" size="md" color="on-primary" />
+      </Button>
+
+      <Button variant="primary" type="icon-only" size="md">
+        <Icon name="plus" size="md" color="on-primary" />
+      </Button>
+      <Button variant="primary" type="icon-only" size="sm">
+        <Icon name="plus" size="md" color="on-primary" />
+      </Button>
+
+      <Button
+        variant="secondary"
+        type="icon-and-text"
+        size="md"
+        text="icon-only-md"
+        route={"/"}
+      >
+        <Icon name="user" size="md" color="primary" />
+      </Button>
+
+      <Button variant="secondary" type="icon-only" size="md">
+        <Icon name="plus" size="md" color="primary" />
+      </Button>
+      <Button variant="secondary" type="icon-only" size="sm">
+        <Icon name="plus" size="md" color="primary" />
+      </Button>
+
+      {/* <Icon name="clock" size="lg" color="success" />
+      <Icon name="user" size="md" color="primary" />
+      <Icon name="plus" size="xxl" color="success" /> */}
+
+      {userSpecificData.map((paintObj) => (
+        <ListItemStructure
+          key={paintObj.id}
+          slots={{
+            SlotOne: (
+              <Text
+                textType="p"
+                string={paintObj.name}
+                typeStyle="body-sm-semiBold"
+                colorStyle="primary"
+              />
+            ),
+            SlotTwo: (
+              <Text
+                textType="p"
+                string={paintObj.brand_name}
+                typeStyle="body-sm-reg"
+                colorStyle="secondary"
+              />
+            ),
+          }}
+        />
+      ))}
+    </div>
   );
 }
