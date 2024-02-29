@@ -5,6 +5,13 @@ import { UserDetails } from "@/lib/getUser";
 import "./global.css";
 import TopBar from "@/components/topbar/topbar";
 
+import localFonts from "next/font/local";
+
+const civilPremium = localFonts({
+  src: "./font/CivilPremium-Regular.woff2",
+  variable: "--font-civil",
+});
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
